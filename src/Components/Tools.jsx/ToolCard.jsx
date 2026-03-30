@@ -49,7 +49,7 @@ const ToolCard = ({ item, handleAddCart }) => {
                     {/* Buy Now Button */}
                     <button
                         onClick={() => handleAddCart(item)}
-                        className="w-full buttonPrimary text-white font-bold py-5 rounded-[24px] text-xl transition-colors duration-200 my-4">
+                        className="w-full buttonPrimary text-white font-bold py-5  text-xl  duration-200 my-4 active:scale-100! ">
                         Buy Now
                     </button>
                 </div>

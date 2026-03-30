@@ -11,6 +11,7 @@ import Loading from './Components/Loading/Loading'
 import { Bounce, toast } from 'react-toastify'
 import GetStartedSteps from './Components/GetStartedSteps/GetStartedSteps'
 import PricingSection from './Components/PricingSection/PricingSection'
+import CallToAction from './Components/CallToAction/CallToAction'
 
 const fetchPromse = async () => {
   const res = await fetch('/tools.json')
@@ -78,6 +79,7 @@ function App() {
         }
         <GetStartedSteps></GetStartedSteps>
         <PricingSection></PricingSection>
+        <CallToAction></CallToAction>
       </Suspense>
     </div >
   )
