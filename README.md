@@ -1,16 +1,51 @@
-# React + Vite
+# 🚀 Digi Tools – Digital Products Marketplace
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Project Overview
 
-Currently, two official plugins are available:
+**Digi Tools** is a modern web application where users can browse and purchase digital products. Customers can add products to the cart, remove them, and manage their selections easily. The application is fully responsive, ensuring a smooth and user-friendly experience across all devices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🌐 Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🔗 https://digitoolsbd.netlify.app/
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 💻 GitHub Repository
+
+📂 https://github.com/hridoy-ahmmad/DigitalTools.git
+
+---
+
+## 🛠️ Technologies Used
+
+* ⚛️ React.js
+* 🎨 Tailwind CSS
+* 🌼 DaisyUI
+* 🔔 React Toastify
+* 🎯 React Icons
+* 🌍 Netlify (Deployment)
+* 🧑‍💻 Git & GitHub
+
+---
+
+## ✨ Features
+
+* 🛒 Add to Cart functionality
+* ❌ Remove from Cart
+* 🔄 Conditional Rendering (Products / Cart view switch)
+* 📦 Dynamic product data (JSON-based)
+* 🔔 Toast notifications for user actions
+* 📱 Fully Responsive Design
+
+---
+
+## 🚧 Future Improvements
+
+* 💳 Payment Integration
+* 🔐 User Authentication System
+* ⭐ Product Reviews & Ratings
+* 🤖 AI-based product recommendations
+
+---
