@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "name": "Pro Resume Builder",
+        "description": "Create professional resumes with ease and get noticed by recruiters.",
+        "price": 29.99,
+        "period": "one-time",
+        "tag": "best seller",
+        "tagType": "best_seller",
+        "features": [
+            "100+ templates",
+            "ATS optimization",
+            "Export to PDF"
+        ],
+        "icon": "📄"
+    },
+    {
+        "id": 2,
+        "name": "Cloud Storage 1TB",
+        "description": "Secure and reliable cloud storage for all your files.",
+        "price": 9.99,
+        "period": "monthly",
+        "tag": "popular",
+        "tagType": "popular",
+        "features": [
+            "1TB storage",
+            "File encryption",
+            "Access from any device"
+        ],
+        "icon": "☁️"
+    },
+    {
+        "id": 3,
+        "name": "AI Chat Assistant",
+        "description": "Intelligent AI assistant to automate your daily tasks.",
+        "price": 199.99,
+        "period": "yearly",
+        "tag": "new",
+        "tagType": "new",
+        "features": [
+            "24/7 support",
+            "Task automation",
+            "Multi-platform integration"
+        ],
+        "icon": "🤖"
+    },
+    {
+        "id": 4,
+        "name": "Premium Video Editor",
+        "description": "Edit videos like a pro with advanced tools and effects.",
+        "price": 49.99,
+        "period": "one-time",
+        "tag": "popular",
+        "tagType": "popular",
+        "features": [
+            "4K editing",
+            "Color grading",
+            "Special effects library"
+        ],
+        "icon": "🎬"
+    },
+    {
+        "id": 5,
+        "name": "Fitness Tracker App",
+        "description": "Track your workouts, calories, and progress easily.",
+        "price": 5.99,
+        "period": "monthly",
+        "tag": "best seller",
+        "tagType": "best_seller",
+        "features": [
+            "Step counter",
+            "Calorie tracker",
+            "Workout plans"
+        ],
+        "icon": "🏃‍♂️"
+    },
+    {
+        "id": 6,
+        "name": "E-learning Platform",
+        "description": "Learn new skills online with interactive courses.",
+        "price": 99.99,
+        "period": "yearly",
+        "tag": "popular",
+        "tagType": "popular",
+        "features": [
+            "500+ courses",
+            "Certifications",
+            "Expert instructors"
+        ],
+        "icon": "🎓"
+    },
+    {
+        "id": 7,
+        "name": "Website Builder",
+        "description": "Build stunning websites without coding knowledge.",
+        "price": 14.99,
+        "period": "monthly",
+        "tag": "new",
+        "tagType": "new",
+        "features": [
+            "Drag & Drop editor",
+            "Responsive templates",
+            "SEO tools"
+        ],
+        "icon": "🌐"
+    },
+    {
+        "id": 8,
+        "name": "Music Streaming Pro",
+        "description": "Stream millions of songs ad-free anytime, anywhere.",
+        "price": 7.99,
+        "period": "monthly",
+        "tag": "best seller",
+        "tagType": "best_seller",
+        "features": [
+            "Offline mode",
+            "High-quality audio",
+            "Curated playlists"
+        ],
+        "icon": "🎵"
+    }
+]

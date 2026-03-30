@@ -1,7 +1,7 @@
 import React from 'react';
 import { HiOutlineShoppingCart } from 'react-icons/hi';
 
-const Nav = () => {
+const Nav = ({ carts }) => {
     return (
         <div className=' bg-[#f2f2f2a1] shadow-sm'>
             <div className="navbar flex-col md:flex-row gap-5 md:gap-0 max-w-7xl mx-auto">
@@ -34,7 +34,7 @@ const Nav = () => {
                 <div className="navbar-end flex  flex-col md:flex-row gap-3 p-5 md:p-0">
                     <div className='relative'>
                         <HiOutlineShoppingCart />
-                        <p className='absolute -top-4 -left-2'>0</p>
+                        <p className='absolute -top-4 -left-2'>{carts.length}</p>
                     </div>
                     <p>Login</p>
                     <button className="buttonPrimary">Get Started</button>
