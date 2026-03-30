@@ -41,11 +41,3 @@
 
 ---
 
-## 🚧 Future Improvements
-
-* 💳 Payment Integration
-* 🔐 User Authentication System
-* ⭐ Product Reviews & Ratings
-* 🤖 AI-based product recommendations
-
----
