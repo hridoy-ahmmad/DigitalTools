@@ -9,15 +9,15 @@ const ToolCard = ({ item, handleAddCart }) => {
                 <div className="relative w-full bg-white border border-gray-100 rounded-lg p-8 shadow-sm">
 
                     {/* Best Seller Badge */}
-                    <div className="absolute top-6 right-6 bg-[#FEF3C7] text-[#92400E] text-sm font-medium px-4 py-1.5 rounded-full">
+                    <div className={`absolute top-6 right-6 ${item.tag == 'best seller' && 'bg-[#FEF3C7] text-[#92400E]'} ${item.tag == 'popular' && 'text-[#4F39F6] bg-purple-100'}  text-md ${item.tag == 'new' && 'bg-green-100 text-green-600'} font-semibold px-4 py-1.5 rounded-full`}>
                         {item.tag}
                     </div>
 
                     {/* Icon Header */}
                     <div className="mb-6">
-                        <div className="w-14 h-14 bg-white border border-gray-100 rounded-full flex items-center justify-center shadow-sm">
+                        <div className="w-14 h-14 bg-blue-100 border border-gray-100 rounded-full flex items-center justify-center shadow-sm">
                             {/* Simple emoji or SVG to represent the writing icon */}
-                            <span className="text-2xl">{item.icon}</span>
+                            <span className="text-2xl b">{item.icon}</span>
                         </div>
                     </div>
 
@@ -39,17 +39,17 @@ const ToolCard = ({ item, handleAddCart }) => {
 
                     {/* Features List */}
                     {
-                        item.features.map(i => 
-                        <div className='flex gap-2 textPrimary'>
-                            <p className='flex gap-2 textPrimary items-center text-[#64748B]'> <FaCheck className='text-green-500'/>{i}</p>
-                        </div>)
+                        item.features.map(i =>
+                            <div className='flex gap-2 textPrimary'>
+                                <p className='flex gap-2 textPrimary items-center text-[#64748B]'> <FaCheck className='text-green-500' />{i}</p>
+                            </div>)
                     }
 
 
                     {/* Buy Now Button */}
-                    <button 
-                    onClick={()=> handleAddCart(item)}
-                    className="w-full buttonPrimary text-white font-bold py-5 rounded-[24px] text-xl transition-colors duration-200 my-4">
+                    <button
+                        onClick={() => handleAddCart(item)}
+                        className="w-full buttonPrimary text-white font-bold py-5 rounded-[24px] text-xl transition-colors duration-200 my-4">
                         Buy Now
                     </button>
                 </div>
