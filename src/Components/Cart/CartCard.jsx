@@ -32,7 +32,7 @@ const CartCard = ({ item, carts, setCarts }) => {
             </div>
             <button
                 onClick={() => handleRemove()}
-                className='font-semibold text-red-500 hover:text-red-600'>Remove</button>
+                className='font-semibold text-red-500 hover:text-red-600 cursor-pointer'>Remove</button>
         </div>
     );
 };

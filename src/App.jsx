@@ -73,14 +73,13 @@ function App() {
         <Performance></Performance>
         <TabBar handleProducts={handleProducts} handleCart={handleCart} active={active} carts={carts}></TabBar>
         {
-          active === 'Products' && <Tools handleAddCart={handleAddCart} dataPromse={dataPromse}></Tools>
+          active === 'Products' ? <>
+            <Tools handleAddCart={handleAddCart} dataPromse={dataPromse}></Tools>
+            <PricingSection></PricingSection>
+            <CallToAction></CallToAction>
+          </>
+            : active === 'Cart' ? <Cart carts={carts} setCarts={setCarts}></Cart > : ''
         }
-        {
-          active === 'Cart' && <Cart carts={carts} setCarts={setCarts}></Cart >
-        }
-        <GetStartedSteps></GetStartedSteps>
-        <PricingSection></PricingSection>
-        <CallToAction></CallToAction>
         <Footer></Footer>
       </Suspense>
     </div >

@@ -11,7 +11,21 @@ const Cart = ({ carts, setCarts }) => {
 
     const handleProceed = () => {
         setCarts([])
-        toast.error(`Proceed Successful`, {
+        if (carts.length === 0) {
+            toast.info(`Cart is empty.`, {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                transition: Bounce,
+            });
+            return
+        }
+        toast.success(`Proceed Successful`, {
             position: "top-right",
             autoClose: 2000,
             hideProgressBar: false,
@@ -25,7 +39,7 @@ const Cart = ({ carts, setCarts }) => {
     }
 
     return (
-        <div className='max-w-7xl mx-auto'>
+        <div className='max-w-7xl mx-auto mb-5'>
             <h1 className="text-3xl font-bold text-[#0F172A] mb-3">
                 Your Cart
             </h1>
