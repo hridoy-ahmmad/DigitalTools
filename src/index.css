@@ -2,6 +2,14 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-*{
+* {
   font-family: "Manrope", sans-serif;
+}
+
+.buttonPrimary {
+  @apply hover:scale-105 transition duration-100 bg-linear-to-r from-[#4F39F6] to-[#9514FA] py-3 px-4 rounded-full text-white text-[16px]
+}
+
+.primaryText {
+  @apply text-[22px] text-gray-500
 }

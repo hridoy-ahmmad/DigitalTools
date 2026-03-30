@@ -3,8 +3,8 @@ import { HiOutlineShoppingCart } from 'react-icons/hi';
 
 const Nav = () => {
     return (
-        <div className=' bg-base-100 shadow-sm'>
-            <div className="navbar flex-col md:flex-row gap-5 md:gap-0 container mx-auto">
+        <div className=' bg-[#f2f2f2a1] shadow-sm'>
+            <div className="navbar flex-col md:flex-row gap-5 md:gap-0 max-w-7xl mx-auto">
                 <div className="navbar-start mr-48 md:mr-0 ">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -24,20 +24,20 @@ const Nav = () => {
                     </a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 font-semibold">
+                    <ul className="menu menu-horizontal px-1 font-semibold text-[#101727]">
                         <li><a>Products</a></li>
                         <li><a>Features</a></li>
                         <li><a>Testimonial</a></li>
                         <li><a>FAQ</a></li>
                     </ul>
                 </div>
-                <div className="navbar-end flex gap-3 p-5 md:p-0">
+                <div className="navbar-end flex  flex-col md:flex-row gap-3 p-5 md:p-0">
                     <div className='relative'>
                         <HiOutlineShoppingCart />
                         <p className='absolute -top-4 -left-2'>0</p>
                     </div>
                     <p>Login</p>
-                    <button className="hover:scale-105 transition duration-100 bg-linear-to-r from-[#4F39F6] to-[#9514FA]  py-3 px-4 rounded-full text-white font-bold btn">Get Started</button>
+                    <button className="buttonPrimary">Get Started</button>
                 </div>
             </div>
         </div>
