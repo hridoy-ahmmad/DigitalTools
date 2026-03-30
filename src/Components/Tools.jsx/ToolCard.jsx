@@ -4,7 +4,7 @@ import { FaCheck } from 'react-icons/fa';
 const ToolCard = ({ item, handleAddCart }) => {
     return (
         <div>
-            <div className="flex items-center justify-center ">
+            <div className="flex items-center justify-center hover:-translate-y-3 duration-300 hover:shadow-xl">
                 {/* Main Card Container */}
                 <div className="relative w-full bg-white border border-gray-100 rounded-lg p-8 shadow-sm">
 

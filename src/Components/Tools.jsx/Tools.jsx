@@ -5,7 +5,7 @@ const Tools = ({ dataPromse, handleAddCart }) => {
     const tools = use(dataPromse)
 
     return (
-        <div className='grid grid-cols-3 max-w-7xl mx-auto gap-6'>
+        <div className='grid grid-cols-3 max-w-7xl mx-auto gap-6 my-3'>
             {
                 tools.map(item => <ToolCard key={item.id} item={item} handleAddCart={handleAddCart}></ToolCard>)
             }

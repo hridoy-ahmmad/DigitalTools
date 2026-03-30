@@ -9,6 +9,7 @@ import Cart from './Components/Cart/Cart'
 import { Suspense, useState } from 'react'
 import Loading from './Components/Loading/Loading'
 import { Bounce, toast } from 'react-toastify'
+import GetStartedSteps from './Components/GetStartedSteps/GetStartedSteps'
 
 const fetchPromse = async () => {
   const res = await fetch('/tools.json')
@@ -74,6 +75,7 @@ function App() {
         {
           active === 'Cart' && <Cart carts={carts} setCarts={setCarts}></Cart >
         }
+        <GetStartedSteps></GetStartedSteps>
       </Suspense>
     </div >
   )
