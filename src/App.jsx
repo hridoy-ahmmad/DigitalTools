@@ -6,7 +6,8 @@ import Nav from './Components/Nav/Nav'
 import TabBar from './Components/Tab/TabBar'
 import Tools from './Components/Tools.jsx/Tools'
 import Cart from './Components/Cart/Cart'
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
+import Loading from './Components/Loading/Loading'
 
 const fetchPromse = async () => {
   const res = await fetch('/tools.json')
@@ -40,16 +41,18 @@ function App() {
 
   return (
     <div>
-      <Nav carts={carts}></Nav>
-      <Hero></Hero>
-      <Performance></Performance>
-      <TabBar handleProducts={handleProducts} handleCart={handleCart} active={active} carts={carts}></TabBar>
-      {
-        active === 'Products' && <Tools handleAddCart={handleAddCart} dataPromse={dataPromse}></Tools>
-      }
-      {
-        active === 'Cart' && <Cart carts={carts} setCarts={setCarts}></Cart >
-      }
+      <Suspense fallback={<Loading></Loading>}>
+        <Nav carts={carts}></Nav>
+        <Hero></Hero>
+        <Performance></Performance>
+        <TabBar handleProducts={handleProducts} handleCart={handleCart} active={active} carts={carts}></TabBar>
+        {
+          active === 'Products' && <Tools handleAddCart={handleAddCart} dataPromse={dataPromse}></Tools>
+        }
+        {
+          active === 'Cart' && <Cart carts={carts} setCarts={setCarts}></Cart >
+        }
+      </Suspense>
     </div >
   )
 }
