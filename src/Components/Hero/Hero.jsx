@@ -5,7 +5,7 @@ import { FiPlay } from 'react-icons/fi';
 
 const Hero = () => {
     return (
-        <div className='max-w-7xl mx-auto flex flex-9 justify-between items-center gap-5 my-10 md:my-22 p-4'>
+        <div className='max-w-7xl mx-auto flex flex-9 justify-between items-center gap-5 my-10 md:my-22 p-4 flex-col md:flex-row'>
             <div className='flex-5'>
                 <div className='py-2 px-4 bg-[#E1E7FF] inline-block rounded-full'>
                     <div className='flex gap-1 items-center'>
@@ -26,8 +26,11 @@ const Hero = () => {
                     </button>
                 </div>
             </div>
-            <div className='flex-4  justify-end hidden md:flex' >
-                <img src={hero} alt="" />
+            <div className='flex-4 justify-end hidden md:flex' >
+                <img src={hero} alt="" className='object-contain'/>
+            </div>
+            <div className='md:hidden h-42 w-full  ' >
+                <img src={hero} alt="" className='h-full w-full object-cover '/>
             </div>
         </div>
     );
