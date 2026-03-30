@@ -8,6 +8,7 @@ import Tools from './Components/Tools.jsx/Tools'
 import Cart from './Components/Cart/Cart'
 import { Suspense, useState } from 'react'
 import Loading from './Components/Loading/Loading'
+import { Bounce, toast } from 'react-toastify'
 
 const fetchPromse = async () => {
   const res = await fetch('/tools.json')
@@ -31,10 +32,31 @@ function App() {
   const handleAddCart = (item) => {
     const isExist = carts.find(i => i.id === item.id)
     if (isExist) {
-      alert('already added')
+      toast.error(`"${item.name}" - is alreadey added to cart`, {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Bounce,
+      });
       return
     }
     setCarts([...carts, item])
+    toast.success(`"${item.name}" - is successfully added to cart`, {
+      position: "top-right",
+      autoClose: 1500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      transition: Bounce,
+    });
   }
 
 

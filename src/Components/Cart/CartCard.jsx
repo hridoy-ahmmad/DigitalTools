@@ -1,4 +1,5 @@
 import React from 'react';
+import { Bounce, toast } from 'react-toastify';
 
 const CartCard = ({ item, carts, setCarts }) => {
 
@@ -6,6 +7,17 @@ const CartCard = ({ item, carts, setCarts }) => {
     const handleRemove = () => {
         const filter = carts.filter(i => i.id !== item.id)
         setCarts(filter)
+        toast.info(`"${item.name}" - has been deleted from cart items`, {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Bounce,
+        });
     }
 
 

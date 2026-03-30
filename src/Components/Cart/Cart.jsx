@@ -1,5 +1,7 @@
 import React from 'react';
 import CartCard from './CartCard';
+import { Bounce, toast } from 'react-toastify';
+import EmptyCart from './EmptyCart';
 
 const Cart = ({ carts, setCarts }) => {
 
@@ -9,6 +11,17 @@ const Cart = ({ carts, setCarts }) => {
 
     const handleProceed = () => {
         setCarts([])
+        toast.error(`Proceed Successful`, {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Bounce,
+        });
     }
 
     return (
@@ -17,11 +30,11 @@ const Cart = ({ carts, setCarts }) => {
                 Your Cart
             </h1>
             {
-                carts.map(item => <CartCard key={item.id} item={item} carts={carts} setCarts={setCarts}></CartCard>)
+                carts.length === 0 ? <EmptyCart /> : carts.map(item => <CartCard key={item.id} item={item} carts={carts} setCarts={setCarts}></CartCard>)
             }
             <div className="flex items-center justify-between mb-8">
                 <span className="text-[#94A3B8] text-xl">Total:</span>
-                <span className="text-3xl font-bold text-[#0F172A]">{totalPrice}</span>
+                <span className="text-3xl font-bold text-[#0F172A]">${totalPrice}</span>
             </div>
 
             <button
