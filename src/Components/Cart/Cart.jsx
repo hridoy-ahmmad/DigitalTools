@@ -47,13 +47,13 @@ const Cart = ({ carts, setCarts }) => {
                 carts.length === 0 ? <EmptyCart /> : carts.map(item => <CartCard key={item.id} item={item} carts={carts} setCarts={setCarts}></CartCard>)
             }
             <div className="flex items-center justify-between mb-8">
-                <span className="text-[#94A3B8] text-xl">Total:</span>
-                <span className="text-3xl font-bold text-[#0F172A]">${totalPrice}</span>
+                <span className="text-gray-700 text-xl font-bold">Total:</span>
+                <span className="text-3xl font-bold text-[#0F172A]">${totalPrice.toFixed(2)}</span>
             </div>
 
             <button
                 onClick={handleProceed}
-                className="w-full bg-[#8B2CFF] hover:bg-[#7A25E6] text-white font-bold py-5 rounded-[20px] text-xl transition-all shadow-lg shadow-purple-200">
+                className="w-full buttonPrimary text-2xl! active:scale-100!">
                 Proceed To Checkout
             </button>
         </div>

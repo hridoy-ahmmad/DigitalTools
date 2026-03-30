@@ -33,8 +33,8 @@ const Nav = ({ carts }) => {
                 </div>
                 <div className="navbar-end flex  flex-col md:flex-row gap-3 p-5 md:p-0">
                     <div className='relative'>
-                        <HiOutlineShoppingCart />
-                        <p className='absolute -top-4 -left-2'>{carts.length}</p>
+                        <HiOutlineShoppingCart  className='h-6 w-6'/>
+                        <p className='absolute -top-4 -left-4 bg-red-500 px-2 text-white rounded-full'>{carts.length}</p>
                     </div>
                     <p>Login</p>
                     <button className="buttonPrimary">Get Started</button>
