@@ -10,6 +10,7 @@ import { Suspense, useState } from 'react'
 import Loading from './Components/Loading/Loading'
 import { Bounce, toast } from 'react-toastify'
 import GetStartedSteps from './Components/GetStartedSteps/GetStartedSteps'
+import PricingSection from './Components/PricingSection/PricingSection'
 
 const fetchPromse = async () => {
   const res = await fetch('/tools.json')
@@ -63,7 +64,7 @@ function App() {
 
 
   return (
-    <div>
+    <div >
       <Suspense fallback={<Loading></Loading>}>
         <Nav carts={carts}></Nav>
         <Hero></Hero>
@@ -76,6 +77,7 @@ function App() {
           active === 'Cart' && <Cart carts={carts} setCarts={setCarts}></Cart >
         }
         <GetStartedSteps></GetStartedSteps>
+        <PricingSection></PricingSection>
       </Suspense>
     </div >
   )

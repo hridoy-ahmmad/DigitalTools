@@ -35,7 +35,7 @@ const GetStartedSteps = () => {
             <div className="max-w-7xl mx-auto">
                 {/* Header Section */}
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-[#0F172A] mb-4">
+                    <h2 className="heading">
                         Get Started In 3 Steps
                     </h2>
                     <p className="text-gray-500 text-lg">

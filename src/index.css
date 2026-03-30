@@ -13,3 +13,7 @@
 .primaryText {
   @apply text-[22px] text-gray-500
 }
+
+.heading {
+  @apply text-4xl md:text-5xl font-bold text-[#0F172A] mb-4
+}
