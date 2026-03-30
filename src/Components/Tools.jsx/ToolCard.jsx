@@ -1,13 +1,13 @@
 import React from 'react';
 import { FaCheck } from 'react-icons/fa';
 
-const ToolCard = ({ item, handleAddCart }) => {
+const ToolCard = ({ item, handleAddCart, carts }) => {
+    const founded = carts.find(i => i.id === item.id)
     return (
         <div>
             <div className="flex items-center justify-center hover:-translate-y-3 duration-300 hover:shadow-xl">
                 {/* Main Card Container */}
                 <div className="relative w-full bg-white border border-gray-100 rounded-lg p-8 shadow-sm">
-
                     {/* Best Seller Badge */}
                     <div className={`absolute top-6 right-6 ${item.tag == 'best seller' && 'bg-[#FEF3C7] text-[#92400E]'} ${item.tag == 'popular' && 'text-[#4F39F6] bg-purple-100'}  text-md ${item.tag == 'new' && 'bg-green-100 text-green-600'} font-semibold px-4 py-1.5 rounded-full`}>
                         {item.tag}
@@ -44,13 +44,13 @@ const ToolCard = ({ item, handleAddCart }) => {
                                 <p className='flex gap-2 textPrimary items-center text-[#64748B]'> <FaCheck className='text-green-500' />{i}</p>
                             </div>)
                     }
-
-
                     {/* Buy Now Button */}
                     <button
                         onClick={() => handleAddCart(item)}
                         className="w-full buttonPrimary text-white font-bold py-5  text-xl  duration-200 my-4 active:scale-100! ">
-                        Buy Now
+                        {
+                            founded ? 'Added As cart item' : 'Buy Now'
+                        }
                     </button>
                 </div>
             </div>

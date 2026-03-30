@@ -74,7 +74,7 @@ function App() {
         <TabBar handleProducts={handleProducts} handleCart={handleCart} active={active} carts={carts}></TabBar>
         {
           active === 'Products' ? <>
-            <Tools handleAddCart={handleAddCart} dataPromse={dataPromse}></Tools>
+            <Tools handleAddCart={handleAddCart} dataPromse={dataPromse} carts={carts}></Tools>
             <PricingSection></PricingSection>
             <CallToAction></CallToAction>
           </>
